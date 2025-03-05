@@ -23,11 +23,8 @@ class Article (models.Model):
     last_updated = models.DateTimeField(auto_now= True)
 
     class Meta:
-        ordering = ['-created_on']  # Sorted by creation date in descending order
-
+        ordering = ['-created_on']
+        
     def __str__(self):
         return self.title
     
-    # super user info
-    # User: 610
-    # Password: gio

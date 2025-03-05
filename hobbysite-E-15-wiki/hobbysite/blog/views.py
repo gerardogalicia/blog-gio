@@ -12,3 +12,4 @@ def article_list(request):
 def article_detail(request, article_id):
     article = get_object_or_404(Article, id=article_id)
     return render(request, 'blog/blog_post.html', {'article': article})
+
