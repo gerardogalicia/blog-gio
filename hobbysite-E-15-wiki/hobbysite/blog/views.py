@@ -6,7 +6,7 @@ from blog.models import Article
 # Create your views here.
 
 def article_list(request):
-    articles = Article.objects.all()  # Will be sorted by '-created_on' as per Meta
+    articles = Article.objects.all() 
     return render(request, 'blog/blog_index.html', {'articles': articles})
 
 def article_detail(request, article_id):

@@ -21,7 +21,9 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('wiki/', include('wiki.urls')),
+    
+    #Bit more complex, but prevents the program from misreading similarly
+    # Named objects in other apps. This makes sure that it only takes from blog
     path('blog/', include(('blog.urls', 'blog'), namespace='blog'))
     
 ]
