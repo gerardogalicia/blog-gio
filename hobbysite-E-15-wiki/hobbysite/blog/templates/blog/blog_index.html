@@ -8,8 +8,10 @@
     <ul>
       {% for article in articles %}
         <li>
-          <a href="{% url 'article_detail' article.id %}">{{ article.title }}</a> 
           (Category: {{ article.category }})
+          <br>
+          <a href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a> 
+          
         </li>
       {% endfor %}
     </ul>
