@@ -8,10 +8,10 @@
     <ul>
       {% for article in articles %}
         <li>
-          (Category: {{ article.category }})
-          <br>
-          <a href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a> 
-          
+          <h2>Category: {{ article.category }} </h2>
+        <h3> <a href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a> </h3> 
+          <!-- IMPORTANT! To make sure that the right link gets displayed. Place the appname before the 
+     field it must access! -->
         </li>
       {% endfor %}
     </ul>
